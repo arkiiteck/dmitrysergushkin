@@ -490,8 +490,8 @@ nav ul li a{
     border: solid 1px var(--border-black);
 }
 .sub-topics{
-    max-height: 100vh;
-    padding: 100px 0 50px;
+    max-height: calc(100vh + 100px);
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -547,4 +547,122 @@ nav ul li a{
     margin: 0;
     color: var(--white);
     text-transform: none;
+}
+.recent-work{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+.recent-work h2{
+    font-size: 72px;
+    font-weight: 500;
+}
+.recent-work > p{
+    width: 50%;
+    color: var(--light-gray);
+    font-size: 18px;
+}
+.recent-work .big-button{
+    right: 100px;
+    top: 100px;
+    color: var(--white);
+}
+.list{
+    margin: 0 100px;
+}
+.list ul{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    list-style: none;
+}
+.list ul li a{
+    padding: 50px 50px;
+    display: flex;
+    color: var(--light-gray);
+    text-decoration: none;
+    border-bottom: solid 1px var(--border-black);
+    transition: .5s;
+}
+.list ul li a:hover{
+    padding: 50px 75px;
+    color: var(--primary);
+    border-bottom: solid 1px var(--primary);
+    transition: .5s;
+}
+.list ul li div:nth-child(1){
+    width: 35%;
+}
+.list ul li div:nth-child(2){
+    width: 25%;
+}
+.list ul li div:nth-child(3){
+    width: 25%;
+}
+.list ul li div:nth-child(4){
+    width: 15%;
+    text-align: right;
+}
+.project-view{
+    background-color: var(--gray);
+    width: fit-content;
+    padding: 30px;
+    display: flex;
+    position: absolute;
+    border-radius: 20px;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+.project-images{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow: hidden;
+}
+.project-images img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: .5s;
+}
+ul li:nth-child(1):hover ~ .project-view .project-images img:nth-child(1){
+    margin-top: 0px;
+    transition: .5s;
+}
+ul li:nth-child(2):hover ~ .project-view .project-images img:nth-child(1){
+    margin-top: -175px;
+    transition: .5s;
+}
+ul li:nth-child(3):hover ~ .project-view .project-images img:nth-child(1){
+    margin-top: -350px;
+    transition: .5s;
+}
+ul li:nth-child(4):hover ~ .project-view .project-images img:nth-child(1){
+    margin-top: -525px;
+    transition: .5s;
+}
+ul li:nth-child(5):hover ~ .project-view .project-images img:nth-child(1){
+    margin-top: -700px;
+    transition: .5s;
+}
+.view-circle{
+    background-color: var(--primary);
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    border-radius: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.view-circle p{
+    font-size: 20px;
 }
