@@ -8,6 +8,7 @@
     --white: #FFFFFF;
     --text: #c3c9d3;
     --border-black: #454756;
+    --cards: rgba(52, 54, 60, 0.3);
     --black-tag: #1c1d20;
     --black: #141416;
     --light-gray: #97a4b6;
@@ -665,4 +666,58 @@ ul li:nth-child(5):hover ~ .project-view .project-images img:nth-child(1){
 }
 .view-circle p{
     font-size: 20px;
+}
+.recent-work.testimonials{
+    width: 100%;
+}
+.recent-work.testimonials .testimonial-cards{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+    overflow-x: scroll;
+}
+.testimonial-cards::-webkit-scrollbar {
+    width: 0px;
+}
+.testimonial-card{
+    background-color: var(--cards);
+    width: 550px;
+    min-width: 550px;
+    height: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border: solid  1px var(--border-black);
+    border-radius: 32px;
+    overflow: hidden;
+}
+.testimonial-card p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.testimonial-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.testimonial-info > img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+.testimonial-people-data{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.testimonial-people-data .role{
+    color: var(--light-gray);
+}
+.testimonial-card > img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
